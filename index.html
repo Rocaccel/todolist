@@ -36,15 +36,16 @@
         import { getDatabase, ref, set, onValue, push, remove, update } 
         from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-        const firebaseConfig = {
-  apiKey: "AIzaSyCMgWl9Af-MMcB7ztdp_-MmIQI0Oiwt-pY",
-  authDomain: "todolist-d0cdf.firebaseapp.com",
-  databaseURL: "https://todolist-d0cdf-default-rtdb.firebaseio.com",
-  projectId: "todolist-d0cdf",
-  storageBucket: "todolist-d0cdf.firebasestorage.app",
-  messagingSenderId: "589225329978",
-  appId: "1:589225329978:web:1112cd984c66914aafbc03"
+const firebaseConfig = {
+  apiKey: "PROCESS_ENV_FIREBASE_API_KEY",
+  authDomain: "PROCESS_ENV_FIREBASE_AUTH_DOMAIN",
+  databaseURL: "PROCESS_ENV_FIREBASE_DATABASE_URL",
+  projectId: "PROCESS_ENV_FIREBASE_PROJECT_ID",
+  storageBucket: "PROCESS_ENV_FIREBASE_STORAGE_BUCKET",
+  messagingSenderId: "PROCESS_ENV_FIREBASE_MESSAGING_SENDER_ID",
+  appId: "PROCESS_ENV_FIREBASE_APP_ID"
 };
+
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
